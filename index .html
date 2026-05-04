@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Companion</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>    
+    </header>
+
+   <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">💜 Mental Health Companion</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="openTab(event,'chat')">Chat</a></li>
+      <li><a href="#" onclick="openTab(event,'profile')">Profile</a></li>
+      <li><a href="#" onclick="openTab(event,'tracker')">Mood Tracker</a></li>
+      <li><a href="#" onclick="openTab(event,'resources')">Resources</a></li>
+      <li><a href="#" onclick="openTab(event,'blog')">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Tab Contents -->
+    <div class="tab-content" id="chat" style="display:block;">
+      <div class="chat-box" id="chat-box"></div>
+      <div class="input-box">
+        <input id="user-input" type="text" placeholder="How are you feeling today?">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="profile">
+      <div class="card">
+        <h2>User Profile</h2>
+        <form id="profile-form">
+          <label>Name:</label>
+          <input type="text" id="user-name" placeholder="Enter your name">
+          <label>Email:</label>
+          <input type="email" id="user-email" placeholder="Enter your email">
+          <button type="button" onclick="saveProfile()">Save Profile</button>
+        </form>
+        <div id="profile-display" class="profile-display"></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tracker">
+      <div class="card">
+        <h2>Daily Mood Tracker</h2>
+        <label>Select Mood:</label>
+        <select id="daily-mood">
+          <option value="happy">😊 Happy</option>
+          <option value="sad">😢 Sad</option>
+          <option value="stressed">😥 Stressed</option>
+          <option value="mad">😡 Mad</option>
+          <option value="sick">🤒 Sick</option>
+          <option value="anxious">😰 Anxious</option>
+          <option value="lonely">🥺 Lonely</option>
+          <option value="motivated">💪 Motivated</option>
+          <option value="tired">😴 Tired</option>
+          <option value="excited">🤩 Excited</option>
+        </select>
+        <button onclick="logMood()">Log Mood</button>
+        <div id="mood-log" class="mood-log"></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="resources">
+      <div class="card">
+        <h2>Mental Health Resources</h2>
+        <ul>
+          <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov</a></li>
+          <li><a href="https://www.samaritans.org/" target="_blank">Samaritans Helpline</a></li>
+          <li><a href="https://www.nimh.nih.gov/health/topics" target="_blank">NIMH Resources</a></li>
+          <li><a href="https://www.7cups.com/" target="_blank">7 Cups – Online Therapy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="blog">
+      <div class="card">
+        <h2>Mental Health Blog</h2>
+        <ul>
+          <li>🌸 Practice gratitude every morning.</li>
+          <li>🧘 Take short meditation or breathing breaks.</li>
+          <li>🚶‍♂️ Go for walks to clear your mind.</li>
+          <li>🎵 Listen to uplifting music for mood boost.</li>
+          <li>💬 Connect with friends or family regularly.</li>
+        </ul>
+      </div>
+    </div>   
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
